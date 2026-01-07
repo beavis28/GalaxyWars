@@ -141,11 +141,17 @@ class GameEngine: ObservableObject {
             enemyType = .large
         } else if score > 50 && random < 50 {
             enemyType = .medium
+        } else if random < 30 {
+            enemyType = .circle
         } else {
             enemyType = .small
         }
         
-        let enemy = Enemy(position: CGPoint(x: screenWidth + 20, y: y), type: enemyType)
+        var enemy = Enemy(position: CGPoint(x: screenWidth + 20, y: y), type: enemyType)
+        if enemy.isCircle {
+            // サークル敵の初期設定
+            enemy.circleCenterY = y
+        }
         enemies.append(enemy)
     }
     
@@ -219,6 +225,14 @@ class GameEngine: ObservableObject {
                     // 通常の敵：左へ移動
                     enemies[i].position.x -= enemies[i].speed
                 }
+            } else if enemies[i].isCircle {
+                // サークル敵：円運動で前方に進む
+                enemies[i].position.x -= enemies[i].speed
+                
+                // 円運動（縁を描くような動き）
+                enemies[i].circleAngle += 0.1 // 角度を増やす
+                let offsetY = sin(enemies[i].circleAngle) * enemies[i].circleRadius
+                enemies[i].position.y = enemies[i].circleCenterY + offsetY
             } else {
                 // 通常の敵：左へ移動
                 enemies[i].position.x -= enemies[i].speed
@@ -257,6 +271,37 @@ class GameEngine: ObservableObject {
                     enemyBullets.append(bullet1)
                     enemyBullets.append(bullet2)
                     enemyBullets.append(bullet3)
+                } else if enemies[i].isLarge {
+                    // Large敵：3方向に弾を発射（前方やや上、真ん中、前方やや下）
+                    let bulletSpeed: CGFloat = 2.5
+                    let bulletBaseX = enemies[i].position.x - enemies[i].size.width / 2
+                    let bulletY = enemies[i].position.y
+                    
+                    // 前方やや上
+                    let bullet1 = Bullet(
+                        position: CGPoint(x: bulletBaseX, y: bulletY),
+                        isPlayerBullet: false,
+                        velocityX: -bulletSpeed,
+                        velocityY: -bulletSpeed * 0.5
+                    )
+                    // 真ん中
+                    let bullet2 = Bullet(
+                        position: CGPoint(x: bulletBaseX, y: bulletY),
+                        isPlayerBullet: false,
+                        velocityX: -bulletSpeed,
+                        velocityY: 0.0
+                    )
+                    // 前方やや下
+                    let bullet3 = Bullet(
+                        position: CGPoint(x: bulletBaseX, y: bulletY),
+                        isPlayerBullet: false,
+                        velocityX: -bulletSpeed,
+                        velocityY: bulletSpeed * 0.5
+                    )
+                    
+                    enemyBullets.append(bullet1)
+                    enemyBullets.append(bullet2)
+                    enemyBullets.append(bullet3)
                 } else if enemies[i].isMedium && enemies[i].hasStoppedAtCenter {
                     // Medium敵：中央で止まった時に斜め上と斜め下の2方向に発射
                     let bulletSpeed: CGFloat = 2.5
@@ -280,6 +325,11 @@ class GameEngine: ObservableObject {
                     
                     enemyBullets.append(bullet1)
                     enemyBullets.append(bullet2)
+                } else if enemies[i].isCircle {
+                    // サークル敵：前方に1発
+                    let bulletPosition = CGPoint(x: enemies[i].position.x - enemies[i].size.width / 2, y: enemies[i].position.y)
+                    let bullet = Bullet(position: bulletPosition, isPlayerBullet: false)
+                    enemyBullets.append(bullet)
                 } else {
                     // 通常の敵：1発
                     let bulletPosition = CGPoint(x: enemies[i].position.x - enemies[i].size.width / 2, y: enemies[i].position.y)
@@ -407,6 +457,7 @@ class GameEngine: ObservableObject {
                 break
             }
         }
+        
     }
     
     private func endGame() {

@@ -284,6 +284,17 @@ struct GameView: View {
                 }
                 .fill(enemy.type.color)
                 .stroke(Color.yellow, lineWidth: 1)
+                
+            case .circle:
+                // サークル敵：円形
+                Circle()
+                    .fill(enemy.type.color)
+                    .frame(width: enemy.size.width, height: enemy.size.height)
+                    .position(enemy.position)
+                    .overlay(
+                        Circle()
+                            .stroke(Color.white, lineWidth: 1)
+                    )
             }
         }
     }

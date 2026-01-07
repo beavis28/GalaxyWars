@@ -25,6 +25,7 @@ enum EnemyType: Int, CaseIterable {
     case large = 2   // 大きな敵（遅い、頻繁に弾を打つ）
     case boss = 3     // ボス（遅い、常に弾を打つ）
     case homing = 4   // ホーミング敵（プレイヤーに向かってくる）
+    case circle = 5   // サークル敵（円運動で前方に進む、前方に1発）
     
     var size: CGSize {
         switch self {
@@ -33,6 +34,7 @@ enum EnemyType: Int, CaseIterable {
         case .large: return CGSize(width: 18, height: 18)
         case .boss: return CGSize(width: 22, height: 22)
         case .homing: return CGSize(width: 12, height: 12)
+        case .circle: return CGSize(width: 16, height: 16)
         }
     }
     
@@ -43,6 +45,7 @@ enum EnemyType: Int, CaseIterable {
         case .large: return 0.6...1.2
         case .boss: return 0.4...0.8
         case .homing: return 1.2...1.8
+        case .circle: return 0.8...1.5
         }
     }
     
@@ -50,9 +53,10 @@ enum EnemyType: Int, CaseIterable {
         switch self {
         case .small: return nil // 弾を打たない
         case .medium: return 2.0
-        case .large: return 1.0
+        case .large: return 1.0 // 3発同時発射
         case .boss: return 0.5
         case .homing: return nil // ホーミング敵は弾を打たない
+        case .circle: return 1.5 // 前方に1発
         }
     }
     
@@ -67,6 +71,7 @@ enum EnemyType: Int, CaseIterable {
         case .large: return .purple
         case .boss: return .pink
         case .homing: return .green
+        case .circle: return .blue
         }
     }
     
@@ -77,6 +82,7 @@ enum EnemyType: Int, CaseIterable {
         case .large: return 30
         case .boss: return 50
         case .homing: return 25
+        case .circle: return 15
         }
     }
 }
@@ -93,14 +99,17 @@ struct Enemy {
     var verticalOffset: CGFloat = 0.0 // 上下移動のオフセット
     var hasStoppedAtCenter: Bool = false // 中央で止まったかどうか（medium用）
     var stopTime: Date? = nil // 中央で止まった時刻（medium用）
+    var circleAngle: CGFloat = 0.0 // 円運動の角度（circle用）
+    var circleRadius: CGFloat = 20.0 // 円運動の半径（circle用）
+    var circleCenterY: CGFloat = 0.0 // 円運動の中心Y座標（circle用）
     
     init(position: CGPoint, type: EnemyType) {
         self.position = position
         self.type = type
         self.size = type.size
         self.speed = CGFloat.random(in: type.speedRange)
-        // ボスは3回、mediumは2回打たないと倒せない
-        if type == .boss {
+        // ボスとlargeは3回、mediumは2回打たないと倒せない
+        if type == .boss || type == .large {
             self.health = 3
         } else if type == .medium {
             self.health = 2
@@ -121,7 +130,16 @@ struct Enemy {
     var isMedium: Bool {
         return type == .medium
     }
+    
+    var isLarge: Bool {
+        return type == .large
+    }
+    
+    var isCircle: Bool {
+        return type == .circle
+    }
 }
+
 
 // 弾丸
 struct Bullet {
