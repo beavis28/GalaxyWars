@@ -221,10 +221,6 @@ struct GameView: View {
                     .fill(enemy.type.color)
                     .frame(width: enemy.size.width, height: enemy.size.height)
                     .position(enemy.position)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 2)
-                            .stroke(Color.white, lineWidth: 0.5)
-                    )
                 
             case .large:
                 // 大きな敵：六角形風
@@ -291,10 +287,6 @@ struct GameView: View {
                     .fill(enemy.type.color)
                     .frame(width: enemy.size.width, height: enemy.size.height)
                     .position(enemy.position)
-                    .overlay(
-                        Circle()
-                            .stroke(Color.white, lineWidth: 1)
-                    )
             }
         }
     }
