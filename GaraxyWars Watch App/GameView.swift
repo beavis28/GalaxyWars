@@ -77,7 +77,7 @@ struct GameView: View {
                 .font(.headline)
                 .foregroundColor(.white)
             
-            Text("タップで開始")
+            Text("Tap to Start")
                 .font(.caption)
                 .foregroundColor(.gray)
             
@@ -132,7 +132,7 @@ struct GameView: View {
                 Spacer()
                 
                 // 操作説明
-                Text("ダイアル: 上下移動")
+                Text("Crown: Move Up/Down")
                     .font(.caption2)
                     .foregroundColor(.gray)
                     .padding(4)
@@ -170,7 +170,7 @@ struct GameView: View {
             Button(action: {
                 gameEngine.startGame()
             }) {
-                Text("再プレイ")
+                Text("Retry")
                     .font(.title3)
                     .foregroundColor(.white)
                     .padding()
@@ -287,6 +287,26 @@ struct GameView: View {
                     .fill(enemy.type.color)
                     .frame(width: enemy.size.width, height: enemy.size.height)
                     .position(enemy.position)
+                
+            case .pentagon:
+                // 五角形敵：五角形
+                Path { path in
+                    let center = enemy.position
+                    let size = enemy.size
+                    let radius = size.width / 2
+                    for i in 0..<5 {
+                        let angle = Double(i) * 2.0 * .pi / 5.0 - .pi / 2.0
+                        let x = center.x + radius * CGFloat(cos(angle))
+                        let y = center.y + radius * CGFloat(sin(angle))
+                        if i == 0 {
+                            path.move(to: CGPoint(x: x, y: y))
+                        } else {
+                            path.addLine(to: CGPoint(x: x, y: y))
+                        }
+                    }
+                    path.closeSubpath()
+                }
+                .fill(enemy.type.color)
             }
         }
     }

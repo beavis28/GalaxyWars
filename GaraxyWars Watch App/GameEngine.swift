@@ -133,15 +133,17 @@ class GameEngine: ObservableObject {
         // 敵の種類をランダムに選択（スコアに応じて難易度調整）
         let enemyType: EnemyType
         let random = Int.random(in: 0...100)
-        if score > 200 && random < 10 {
+        if score > 400 && random < 5 {
             enemyType = .boss
-        } else if score > 150 && random < 20 {
-            enemyType = .homing
-        } else if score > 100 && random < 25 {
+        } else if score > 300 && random < 10 {
+            enemyType = .pentagon
+        } else if score > 200 && random < 20 {
             enemyType = .large
-        } else if score > 50 && random < 50 {
+        } else if score > 100 && random < 30 {
+            enemyType = .homing
+        } else if score > 70 && random < 40 {
             enemyType = .medium
-        } else if random < 30 {
+        } else if random < 50 {
             enemyType = .circle
         } else {
             enemyType = .small
@@ -233,6 +235,17 @@ class GameEngine: ObservableObject {
                 enemies[i].circleAngle += 0.1 // 角度を増やす
                 let offsetY = sin(enemies[i].circleAngle) * enemies[i].circleRadius
                 enemies[i].position.y = enemies[i].circleCenterY + offsetY
+            } else if enemies[i].isPentagon {
+                // 五角形敵：斜めに動く
+                enemies[i].position.x -= enemies[i].speed
+                enemies[i].position.y += enemies[i].diagonalDirection * enemies[i].speed * 0.7
+                
+                // 画面の上下で方向を反転
+                if enemies[i].position.y <= enemies[i].size.height / 2 + 10 {
+                    enemies[i].diagonalDirection = 1.0 // 下へ
+                } else if enemies[i].position.y >= screenHeight - enemies[i].size.height / 2 - 10 {
+                    enemies[i].diagonalDirection = -1.0 // 上へ
+                }
             } else {
                 // 通常の敵：左へ移動
                 enemies[i].position.x -= enemies[i].speed
@@ -330,6 +343,29 @@ class GameEngine: ObservableObject {
                     let bulletPosition = CGPoint(x: enemies[i].position.x - enemies[i].size.width / 2, y: enemies[i].position.y)
                     let bullet = Bullet(position: bulletPosition, isPlayerBullet: false)
                     enemyBullets.append(bullet)
+                } else if enemies[i].isPentagon {
+                    // 五角形敵：5つの弾を放射状に発射（左方向を基準）
+                    let bulletSpeed: CGFloat = 2.5
+                    let bulletBaseX = enemies[i].position.x - enemies[i].size.width / 2
+                    let bulletY = enemies[i].position.y
+                    
+                    // 5つの方向に発射（左斜め上、左やや上、左、左やや下、左斜め下）
+                    let angles: [CGFloat] = [
+                        CGFloat.pi * 3.0 / 4.0,  // 左斜め上（135度）
+                        CGFloat.pi * 5.0 / 6.0,  // 左やや上（150度）
+                        CGFloat.pi,              // 左（180度）
+                        CGFloat.pi * 7.0 / 6.0,  // 左やや下（210度）
+                        CGFloat.pi * 5.0 / 4.0   // 左斜め下（225度）
+                    ]
+                    for angle in angles {
+                        let bullet = Bullet(
+                            position: CGPoint(x: bulletBaseX, y: bulletY),
+                            isPlayerBullet: false,
+                            velocityX: cos(angle) * bulletSpeed,
+                            velocityY: sin(angle) * bulletSpeed
+                        )
+                        enemyBullets.append(bullet)
+                    }
                 } else {
                     // 通常の敵：1発
                     let bulletPosition = CGPoint(x: enemies[i].position.x - enemies[i].size.width / 2, y: enemies[i].position.y)

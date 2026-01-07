@@ -26,6 +26,7 @@ enum EnemyType: Int, CaseIterable {
     case boss = 3     // ボス（遅い、常に弾を打つ）
     case homing = 4   // ホーミング敵（プレイヤーに向かってくる）
     case circle = 5   // サークル敵（円運動で前方に進む、前方に1発）
+    case pentagon = 6 // 五角形敵（斜めに動く、5つの弾を飛ばす）
     
     var size: CGSize {
         switch self {
@@ -35,6 +36,7 @@ enum EnemyType: Int, CaseIterable {
         case .boss: return CGSize(width: 22, height: 22)
         case .homing: return CGSize(width: 12, height: 12)
         case .circle: return CGSize(width: 16, height: 16)
+        case .pentagon: return CGSize(width: 16, height: 16)
         }
     }
     
@@ -46,6 +48,7 @@ enum EnemyType: Int, CaseIterable {
         case .boss: return 0.4...0.8
         case .homing: return 1.2...1.8
         case .circle: return 0.8...1.5
+        case .pentagon: return 1.0...1.6
         }
     }
     
@@ -57,6 +60,7 @@ enum EnemyType: Int, CaseIterable {
         case .boss: return 0.5
         case .homing: return nil // ホーミング敵は弾を打たない
         case .circle: return 1.5 // 前方に1発
+        case .pentagon: return 1.2 // 5つの弾を飛ばす
         }
     }
     
@@ -72,6 +76,7 @@ enum EnemyType: Int, CaseIterable {
         case .boss: return .pink
         case .homing: return .green
         case .circle: return .blue
+        case .pentagon: return .yellow
         }
     }
     
@@ -83,6 +88,7 @@ enum EnemyType: Int, CaseIterable {
         case .boss: return 50
         case .homing: return 25
         case .circle: return 15
+        case .pentagon: return 35
         }
     }
 }
@@ -102,6 +108,7 @@ struct Enemy {
     var circleAngle: CGFloat = 0.0 // 円運動の角度（circle用）
     var circleRadius: CGFloat = 20.0 // 円運動の半径（circle用）
     var circleCenterY: CGFloat = 0.0 // 円運動の中心Y座標（circle用）
+    var diagonalDirection: CGFloat = 1.0 // 斜め移動の方向（1.0 = 右下、-1.0 = 左上）（pentagon用）
     
     init(position: CGPoint, type: EnemyType) {
         self.position = position
@@ -137,6 +144,10 @@ struct Enemy {
     
     var isCircle: Bool {
         return type == .circle
+    }
+    
+    var isPentagon: Bool {
+        return type == .pentagon
     }
 }
 
