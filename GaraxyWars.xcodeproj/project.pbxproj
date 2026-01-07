@@ -1,0 +1,671 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10CD8A182F0E0E2F00F4B2D6 /* GaraxyWars Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 10CD8A172F0E0E2F00F4B2D6 /* GaraxyWars Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		10CD8A192F0E0E2F00F4B2D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10CD8A0B2F0E0E2F00F4B2D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10CD8A162F0E0E2F00F4B2D6;
+			remoteInfo = "GaraxyWars Watch App";
+		};
+		10CD8A272F0E0E3100F4B2D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10CD8A0B2F0E0E2F00F4B2D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10CD8A162F0E0E2F00F4B2D6;
+			remoteInfo = "GaraxyWars Watch App";
+		};
+		10CD8A312F0E0E3100F4B2D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10CD8A0B2F0E0E2F00F4B2D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10CD8A162F0E0E2F00F4B2D6;
+			remoteInfo = "GaraxyWars Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		10CD8A3D2F0E0E3100F4B2D6 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				10CD8A182F0E0E2F00F4B2D6 /* GaraxyWars Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		10CD8A112F0E0E2F00F4B2D6 /* GaraxyWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GaraxyWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		10CD8A172F0E0E2F00F4B2D6 /* GaraxyWars Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GaraxyWars Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		10CD8A262F0E0E3100F4B2D6 /* GaraxyWars Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GaraxyWars Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		10CD8A302F0E0E3100F4B2D6 /* GaraxyWars Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GaraxyWars Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		10CD8A1B2F0E0E2F00F4B2D6 /* GaraxyWars Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "GaraxyWars Watch App";
+			sourceTree = "<group>";
+		};
+		10CD8A292F0E0E3100F4B2D6 /* GaraxyWars Watch AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "GaraxyWars Watch AppTests";
+			sourceTree = "<group>";
+		};
+		10CD8A332F0E0E3100F4B2D6 /* GaraxyWars Watch AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "GaraxyWars Watch AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		10CD8A142F0E0E2F00F4B2D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10CD8A232F0E0E3100F4B2D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10CD8A2D2F0E0E3100F4B2D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10CD8A0A2F0E0E2F00F4B2D6 = {
+			isa = PBXGroup;
+			children = (
+				10CD8A1B2F0E0E2F00F4B2D6 /* GaraxyWars Watch App */,
+				10CD8A292F0E0E3100F4B2D6 /* GaraxyWars Watch AppTests */,
+				10CD8A332F0E0E3100F4B2D6 /* GaraxyWars Watch AppUITests */,
+				10CD8A122F0E0E2F00F4B2D6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		10CD8A122F0E0E2F00F4B2D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				10CD8A112F0E0E2F00F4B2D6 /* GaraxyWars.app */,
+				10CD8A172F0E0E2F00F4B2D6 /* GaraxyWars Watch App.app */,
+				10CD8A262F0E0E3100F4B2D6 /* GaraxyWars Watch AppTests.xctest */,
+				10CD8A302F0E0E3100F4B2D6 /* GaraxyWars Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		10CD8A102F0E0E2F00F4B2D6 /* GaraxyWars */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10CD8A3E2F0E0E3100F4B2D6 /* Build configuration list for PBXNativeTarget "GaraxyWars" */;
+			buildPhases = (
+				10CD8A0F2F0E0E2F00F4B2D6 /* Resources */,
+				10CD8A3D2F0E0E3100F4B2D6 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10CD8A1A2F0E0E2F00F4B2D6 /* PBXTargetDependency */,
+			);
+			name = GaraxyWars;
+			packageProductDependencies = (
+			);
+			productName = GaraxyWars;
+			productReference = 10CD8A112F0E0E2F00F4B2D6 /* GaraxyWars.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		10CD8A162F0E0E2F00F4B2D6 /* GaraxyWars Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10CD8A3A2F0E0E3100F4B2D6 /* Build configuration list for PBXNativeTarget "GaraxyWars Watch App" */;
+			buildPhases = (
+				10CD8A132F0E0E2F00F4B2D6 /* Sources */,
+				10CD8A142F0E0E2F00F4B2D6 /* Frameworks */,
+				10CD8A152F0E0E2F00F4B2D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				10CD8A1B2F0E0E2F00F4B2D6 /* GaraxyWars Watch App */,
+			);
+			name = "GaraxyWars Watch App";
+			packageProductDependencies = (
+			);
+			productName = "GaraxyWars Watch App";
+			productReference = 10CD8A172F0E0E2F00F4B2D6 /* GaraxyWars Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		10CD8A252F0E0E3100F4B2D6 /* GaraxyWars Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10CD8A412F0E0E3100F4B2D6 /* Build configuration list for PBXNativeTarget "GaraxyWars Watch AppTests" */;
+			buildPhases = (
+				10CD8A222F0E0E3100F4B2D6 /* Sources */,
+				10CD8A232F0E0E3100F4B2D6 /* Frameworks */,
+				10CD8A242F0E0E3100F4B2D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10CD8A282F0E0E3100F4B2D6 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				10CD8A292F0E0E3100F4B2D6 /* GaraxyWars Watch AppTests */,
+			);
+			name = "GaraxyWars Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "GaraxyWars Watch AppTests";
+			productReference = 10CD8A262F0E0E3100F4B2D6 /* GaraxyWars Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		10CD8A2F2F0E0E3100F4B2D6 /* GaraxyWars Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10CD8A442F0E0E3100F4B2D6 /* Build configuration list for PBXNativeTarget "GaraxyWars Watch AppUITests" */;
+			buildPhases = (
+				10CD8A2C2F0E0E3100F4B2D6 /* Sources */,
+				10CD8A2D2F0E0E3100F4B2D6 /* Frameworks */,
+				10CD8A2E2F0E0E3100F4B2D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10CD8A322F0E0E3100F4B2D6 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				10CD8A332F0E0E3100F4B2D6 /* GaraxyWars Watch AppUITests */,
+			);
+			name = "GaraxyWars Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "GaraxyWars Watch AppUITests";
+			productReference = 10CD8A302F0E0E3100F4B2D6 /* GaraxyWars Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		10CD8A0B2F0E0E2F00F4B2D6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					10CD8A102F0E0E2F00F4B2D6 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					10CD8A162F0E0E2F00F4B2D6 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					10CD8A252F0E0E3100F4B2D6 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 10CD8A162F0E0E2F00F4B2D6;
+					};
+					10CD8A2F2F0E0E3100F4B2D6 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 10CD8A162F0E0E2F00F4B2D6;
+					};
+				};
+			};
+			buildConfigurationList = 10CD8A0E2F0E0E2F00F4B2D6 /* Build configuration list for PBXProject "GaraxyWars" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 10CD8A0A2F0E0E2F00F4B2D6;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 10CD8A122F0E0E2F00F4B2D6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				10CD8A102F0E0E2F00F4B2D6 /* GaraxyWars */,
+				10CD8A162F0E0E2F00F4B2D6 /* GaraxyWars Watch App */,
+				10CD8A252F0E0E3100F4B2D6 /* GaraxyWars Watch AppTests */,
+				10CD8A2F2F0E0E3100F4B2D6 /* GaraxyWars Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		10CD8A0F2F0E0E2F00F4B2D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10CD8A152F0E0E2F00F4B2D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10CD8A242F0E0E3100F4B2D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10CD8A2E2F0E0E3100F4B2D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		10CD8A132F0E0E2F00F4B2D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10CD8A222F0E0E3100F4B2D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10CD8A2C2F0E0E3100F4B2D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		10CD8A1A2F0E0E2F00F4B2D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10CD8A162F0E0E2F00F4B2D6 /* GaraxyWars Watch App */;
+			targetProxy = 10CD8A192F0E0E2F00F4B2D6 /* PBXContainerItemProxy */;
+		};
+		10CD8A282F0E0E3100F4B2D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10CD8A162F0E0E2F00F4B2D6 /* GaraxyWars Watch App */;
+			targetProxy = 10CD8A272F0E0E3100F4B2D6 /* PBXContainerItemProxy */;
+		};
+		10CD8A322F0E0E3100F4B2D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10CD8A162F0E0E2F00F4B2D6 /* GaraxyWars Watch App */;
+			targetProxy = 10CD8A312F0E0E3100F4B2D6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		10CD8A382F0E0E3100F4B2D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = XQZ4S6PXLM;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		10CD8A392F0E0E3100F4B2D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = XQZ4S6PXLM;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		10CD8A3B2F0E0E3100F4B2D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XQZ4S6PXLM;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = GaraxyWars;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.engineernest.GaraxyWars.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Debug;
+		};
+		10CD8A3C2F0E0E3100F4B2D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XQZ4S6PXLM;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = GaraxyWars;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.engineernest.GaraxyWars.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Release;
+		};
+		10CD8A3F2F0E0E3100F4B2D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XQZ4S6PXLM;
+				INFOPLIST_KEY_CFBundleDisplayName = GaraxyWars;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.engineernest.GaraxyWars;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		10CD8A402F0E0E3100F4B2D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XQZ4S6PXLM;
+				INFOPLIST_KEY_CFBundleDisplayName = GaraxyWars;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.engineernest.GaraxyWars;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		10CD8A422F0E0E3100F4B2D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XQZ4S6PXLM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.engineernest.GaraxyWars-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GaraxyWars Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GaraxyWars Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Debug;
+		};
+		10CD8A432F0E0E3100F4B2D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XQZ4S6PXLM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.engineernest.GaraxyWars-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GaraxyWars Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GaraxyWars Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Release;
+		};
+		10CD8A452F0E0E3100F4B2D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XQZ4S6PXLM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.engineernest.GaraxyWars-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "GaraxyWars Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Debug;
+		};
+		10CD8A462F0E0E3100F4B2D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XQZ4S6PXLM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.engineernest.GaraxyWars-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "GaraxyWars Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		10CD8A0E2F0E0E2F00F4B2D6 /* Build configuration list for PBXProject "GaraxyWars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10CD8A382F0E0E3100F4B2D6 /* Debug */,
+				10CD8A392F0E0E3100F4B2D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10CD8A3A2F0E0E3100F4B2D6 /* Build configuration list for PBXNativeTarget "GaraxyWars Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10CD8A3B2F0E0E3100F4B2D6 /* Debug */,
+				10CD8A3C2F0E0E3100F4B2D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10CD8A3E2F0E0E3100F4B2D6 /* Build configuration list for PBXNativeTarget "GaraxyWars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10CD8A3F2F0E0E3100F4B2D6 /* Debug */,
+				10CD8A402F0E0E3100F4B2D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10CD8A412F0E0E3100F4B2D6 /* Build configuration list for PBXNativeTarget "GaraxyWars Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10CD8A422F0E0E3100F4B2D6 /* Debug */,
+				10CD8A432F0E0E3100F4B2D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10CD8A442F0E0E3100F4B2D6 /* Build configuration list for PBXNativeTarget "GaraxyWars Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10CD8A452F0E0E3100F4B2D6 /* Debug */,
+				10CD8A462F0E0E3100F4B2D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 10CD8A0B2F0E0E2F00F4B2D6 /* Project object */;
+}
