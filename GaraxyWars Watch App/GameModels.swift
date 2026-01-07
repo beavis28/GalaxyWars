@@ -91,14 +91,22 @@ struct Enemy {
     var health: Int
     var verticalDirection: CGFloat = 1.0 // 上下移動の方向（1.0 = 下、-1.0 = 上）
     var verticalOffset: CGFloat = 0.0 // 上下移動のオフセット
+    var hasStoppedAtCenter: Bool = false // 中央で止まったかどうか（medium用）
+    var stopTime: Date? = nil // 中央で止まった時刻（medium用）
     
     init(position: CGPoint, type: EnemyType) {
         self.position = position
         self.type = type
         self.size = type.size
         self.speed = CGFloat.random(in: type.speedRange)
-        // ボスは3回打たないと倒せない
-        self.health = type == .boss ? 3 : 1
+        // ボスは3回、mediumは2回打たないと倒せない
+        if type == .boss {
+            self.health = 3
+        } else if type == .medium {
+            self.health = 2
+        } else {
+            self.health = 1
+        }
     }
     
     func canFire() -> Bool {
@@ -108,6 +116,10 @@ struct Enemy {
     
     var isBoss: Bool {
         return type == .boss
+    }
+    
+    var isMedium: Bool {
+        return type == .medium
     }
 }
 

@@ -193,6 +193,32 @@ class GameEngine: ObservableObject {
                 } else if enemies[i].position.y >= screenHeight - enemies[i].size.height / 2 - 10 {
                     enemies[i].verticalDirection = -1.0 // 上へ
                 }
+            } else if enemies[i].isMedium {
+                // Medium敵：中央で一度止まって弾を打つ
+                let centerX = screenWidth / 2
+                let centerThreshold: CGFloat = 5.0 // 中央とみなす範囲
+                
+                // 中央に到達していない場合は左へ移動
+                if !enemies[i].hasStoppedAtCenter && enemies[i].position.x > centerX + centerThreshold {
+                    enemies[i].position.x -= enemies[i].speed
+                } else if !enemies[i].hasStoppedAtCenter && abs(enemies[i].position.x - centerX) <= centerThreshold {
+                    // 中央に到達したら止まる
+                    enemies[i].hasStoppedAtCenter = true
+                    enemies[i].stopTime = Date()
+                    // 位置を中央に固定
+                    enemies[i].position.x = centerX
+                } else if enemies[i].hasStoppedAtCenter {
+                    // 中央で止まっている間は移動しない
+                    // 1秒後に再び移動を開始
+                    if let stopTime = enemies[i].stopTime,
+                       Date().timeIntervalSince(stopTime) >= 1.0 {
+                        // 再び左へ移動
+                        enemies[i].position.x -= enemies[i].speed
+                    }
+                } else {
+                    // 通常の敵：左へ移動
+                    enemies[i].position.x -= enemies[i].speed
+                }
             } else {
                 // 通常の敵：左へ移動
                 enemies[i].position.x -= enemies[i].speed
@@ -231,6 +257,29 @@ class GameEngine: ObservableObject {
                     enemyBullets.append(bullet1)
                     enemyBullets.append(bullet2)
                     enemyBullets.append(bullet3)
+                } else if enemies[i].isMedium && enemies[i].hasStoppedAtCenter {
+                    // Medium敵：中央で止まった時に斜め上と斜め下の2方向に発射
+                    let bulletSpeed: CGFloat = 2.5
+                    let bulletBaseX = enemies[i].position.x - enemies[i].size.width / 2
+                    let bulletY = enemies[i].position.y
+                    
+                    // 斜め上
+                    let bullet1 = Bullet(
+                        position: CGPoint(x: bulletBaseX, y: bulletY),
+                        isPlayerBullet: false,
+                        velocityX: -bulletSpeed,
+                        velocityY: -bulletSpeed * 0.7
+                    )
+                    // 斜め下
+                    let bullet2 = Bullet(
+                        position: CGPoint(x: bulletBaseX, y: bulletY),
+                        isPlayerBullet: false,
+                        velocityX: -bulletSpeed,
+                        velocityY: bulletSpeed * 0.7
+                    )
+                    
+                    enemyBullets.append(bullet1)
+                    enemyBullets.append(bullet2)
                 } else {
                     // 通常の敵：1発
                     let bulletPosition = CGPoint(x: enemies[i].position.x - enemies[i].size.width / 2, y: enemies[i].position.y)
